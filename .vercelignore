@@ -1,0 +1,9 @@
+.claude/
+.vercel/
+.gitignore
+RESUME_PROMPT.md
+SESSION_HISTORY.md
+build-media.sh
+tests/
+media/service-guards.jpg
+media/service-guards.mp4

@@ -1,0 +1,20 @@
+# Platform / tooling
+.vercel
+.claude/
+node_modules/
+.DS_Store
+
+# Secrets — never commit. Values live in 1Password and in the host's env settings.
+.env
+.env.*
+*.local
+
+# Internal working notes. These name the client, his DNS and his Microsoft 365
+# org id, so they stay out of the repo regardless of whether it is public.
+PLAN.md
+DERRICK_FEEDBACK_2026-07-27.md
+SESSION_HISTORY.md
+RESUME_PROMPT.md
+
+# Local preview renders, not part of the site
+preview-*.png
