@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; media-src 'self'; connect-src 'self' https://dcservicespro-lead.WORKERS-SUBDOMAIN.workers.dev; base-uri 'self'; form-action 'self' https://dcservicespro-lead.WORKERS-SUBDOMAIN.workers.dev; upgrade-insecure-requests">
   <title>Gutter Cleaning in Metro Atlanta | DC Services</title>
   <meta name="description" content="Gutter cleaning, downspout clearing, and roof debris removal across metro Atlanta. Locally owned, insured, and available by free quote.">
   <meta name="robots" content="index, follow">
@@ -148,7 +149,7 @@
           <p class="hero-proof"><span class="stars" aria-hidden="true">★★★★★</span> Consistently 5-star customer feedback</p>
         </div>
 
-        <form id="home-quote" class="quote-card quote-form" data-quote-form="residential" action="/api/lead" method="post">
+        <form id="home-quote" class="quote-card quote-form" data-quote-form="residential" action="https://dcservicespro-lead.WORKERS-SUBDOMAIN.workers.dev/" method="post">
           <input type="hidden" name="formType" value="residential">
           <input class="hp-field" type="text" name="_hp" tabindex="-1" autocomplete="off" aria-hidden="true">
           <h2>Get your free quote</h2>

@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; media-src 'self'; connect-src 'self' https://dcservicespro-lead.WORKERS-SUBDOMAIN.workers.dev; base-uri 'self'; form-action 'self' https://dcservicespro-lead.WORKERS-SUBDOMAIN.workers.dev; upgrade-insecure-requests">
   <title>Request a Commercial Gutter Cleaning Estimate | DC Services</title>
   <meta name="description" content="Request a commercial gutter cleaning estimate in metro Atlanta for property managers, HOAs, retail centers, office parks, and apartment communities.">
   <meta name="robots" content="index, follow">
@@ -63,7 +64,7 @@
           </ul>
         </div>
 
-        <form class="quote-card quote-form" data-quote-form="commercial" action="/api/lead" method="post">
+        <form class="quote-card quote-form" data-quote-form="commercial" action="https://dcservicespro-lead.WORKERS-SUBDOMAIN.workers.dev/" method="post">
           <input type="hidden" name="formType" value="commercial">
           <input class="hp-field" type="text" name="_hp" tabindex="-1" autocomplete="off" aria-hidden="true">
           <h2>Request your commercial estimate</h2>

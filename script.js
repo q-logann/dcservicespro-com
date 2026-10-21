@@ -1,3 +1,8 @@
+// Lead form endpoint. This site is static (GitHub Pages), so the form handler
+// lives in a separate Cloudflare Worker. Keep this in sync with the `action`
+// attribute on the quote forms and with the CSP meta tag in each page.
+const LEAD_ENDPOINT = "https://dcservicespro-lead.WORKERS-SUBDOMAIN.workers.dev/";
+
 const yearTargets = document.querySelectorAll("[data-year]");
 const quoteForms = document.querySelectorAll("[data-quote-form]");
 const formStartedAt = new WeakMap();
@@ -57,14 +62,16 @@ quoteForms.forEach((form) => {
     const timeoutId = window.setTimeout(() => controller.abort(), 12_000);
 
     try {
-      const response = await fetch(form.action || "/api/lead", {
+      // The lead endpoint is a Cloudflare Worker on its own origin, not a path
+      // on this site, since GitHub Pages cannot run server code.
+      const response = await fetch(form.action || LEAD_ENDPOINT, {
         method: "POST",
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json",
         },
         body: JSON.stringify(payload),
-        credentials: "same-origin",
+        credentials: "omit",
         signal: controller.signal,
       });
 
