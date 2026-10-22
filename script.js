@@ -1,7 +1,7 @@
 // Lead form endpoint. This site is static (GitHub Pages), so the form handler
 // lives in a separate Cloudflare Worker. Keep this in sync with the `action`
 // attribute on the quote forms and with the CSP meta tag in each page.
-const LEAD_ENDPOINT = "https://dcservicespro-lead.WORKERS-SUBDOMAIN.workers.dev/";
+const LEAD_ENDPOINT = "https://dcservicespro-lead.dcservicespro-lead-worker.workers.dev/";
 
 const yearTargets = document.querySelectorAll("[data-year]");
 const quoteForms = document.querySelectorAll("[data-quote-form]");
