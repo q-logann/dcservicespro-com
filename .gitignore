@@ -21,3 +21,6 @@ preview-*.png
 
 # Cutover runbook: names Derrick's DNS and mail config, keep out of the public repo
 DNS-CUTOVER.md
+
+# Client-facing draft, not for the public repo
+MESSAGE-TO-DERRICK.md
